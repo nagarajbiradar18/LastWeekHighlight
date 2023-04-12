@@ -1,0 +1,47 @@
+
+
+<div class="container">
+	<p class="alignCenter">[ngClass] approach has used here</p>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Grade</th>
+			<th scope="col">DOJ</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let emp of employees; index as i" [ngClass]="checkDate(emp.doj) ? 'orangeBg' : ''">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>{{ emp.name }}</td>
+			<td>{{ emp.grade }}</td>
+			<td>{{ emp.doj | date : 'dd/MM/yyyy' }}</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+
+
+<div class="container">
+	<p class="alignCenter">Custom @directive approach has used here</p>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Grade</th>
+				<th scope="col">DOJ</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let emp of employees; index as i" appRowHighlight [defaultColor]='color' [defaultFlag]="checkDate(emp.doj)">
+				<th scope="row">{{ i + 1 }}</th>
+				<td>{{ emp.name }}</td>
+				<td>{{ emp.grade }}</td>
+				<td>{{ emp.doj | date : 'dd/MM/yyyy' }}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>

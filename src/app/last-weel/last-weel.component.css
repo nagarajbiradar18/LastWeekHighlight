@@ -1,0 +1,32 @@
+.yellowBg {
+    background-color: yellow;
+}
+
+.greenBg {
+    background-color: #b7d1b7;
+}
+
+.orangeBg {
+    background-color: orange;
+}
+
+.container {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.container table {
+    margin: 20px auto;
+
+}
+
+.container table td {
+    text-align: center;
+}
+
+.alignCenter {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 25px;
+}
